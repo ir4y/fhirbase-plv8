@@ -11,15 +11,25 @@
   "devDependencies": {
     "coffee": "latest",
     "coffee-script": "latest",
-    "pg-native":"latest",
+    "csv-load-sync": "0.0.3",
+    "csv-parse": "latest",
     "js-yaml": "latest",
+    "jsedn": "latest",
     "mocha": "latest",
-    "jsedn": "latest"
+    "pg-native": "latest"
   },
-  "dev": {"plpl": "latest"},
-  "engines": { "node": ">=0.12" },
+  "dev": {
+    "plpl": "latest"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
   "homepage": "https://github.com/niquola/plpl",
-  "files": ["bin", "lib", "src"],
+  "files": [
+    "bin",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "publish": "coffee -o lib/ -c src/ && npm publish",
     "migrate": "./build.sh && cat tmp/build.sh | psql $DATABASE_URL",

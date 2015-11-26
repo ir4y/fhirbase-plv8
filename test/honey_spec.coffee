@@ -4,7 +4,6 @@ sql = require('../src/honey.coffee')
 
 tests = test.loadEdn(__dirname + '/honey_spec.edn')
 
-
 describe "HONEY", ->
   tests.forEach ([k,v])->
     it "#{JSON.stringify(k)} => #{v[0]}", ->

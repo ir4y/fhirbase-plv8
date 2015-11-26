@@ -123,13 +123,12 @@ update = (res, expr)->
 insert = (res, expr)->
   res.push("INSERT INTO")
   heval(res, expr.insert)
+
   names = []
   values = []
-
   for k,v of expr.values
     names.push(k)
     values.push(v)
-
 
   parens res, ->
     comma_delimited res, names, res.push
