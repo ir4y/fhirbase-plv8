@@ -1,0 +1,12 @@
+db:
+  image: clkao/postgres-plv8
+
+fhirbase:
+  build: ./
+  command: npm run test
+  links:
+  - db
+  volumes:
+  - .:/data
+  environment:
+    DATABASE_URL: postgres://postgres@db:5432/postgres
